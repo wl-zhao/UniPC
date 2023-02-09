@@ -10,7 +10,7 @@ UniPC is a training-free framework designed for the fast sampling of diffusion m
 
 ![intro](assets/intro.png)
 
-UniPC is by desinged model-agnostic, supporting pixel-space/latent-space DPMs on unconditional/conditional sampling. It can also be applied to both noise prediction modle and data prediction model. 
+UniPC is by desinged model-agnostic, supporting pixel-space/latent-space DPMs on unconditional/conditional sampling. It can also be applied to both noise prediction model and data prediction model. 
 
 # Examples
 
