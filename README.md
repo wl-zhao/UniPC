@@ -12,11 +12,19 @@ UniPC is a training-free framework designed for the fast sampling of diffusion m
 
 UniPC is by desinged model-agnostic, supporting pixel-space/latent-space DPMs on unconditional/conditional sampling. It can also be applied to both noise prediction model and data prediction model. 
 
-# Examples
+Compared with previous methods, UniPC converges faster thanks to the increased order of accuracy. Both quantative and qualitative results show UniPC can remarkably improve the sampling quality, especially in extreme few steps (5~10).
 
 ![demo](assets/demo.png)
 
+# Code Examples
 We provide code examples based on the [ScoreSDE](https://github.com/yang-song/score_sde) and [Stable-Diffusion](https://github.com/CompVis/stable-diffusion) in the `example` folder. Please follow the `README.md` file in the corresponding examples for further instructions to use our UniPC.
+## ScoreSDE with UniPC
+We provide a pytorch example in `example/score_sde_pytorch`, where we show how to use our UniPC to sample from a DPM pre-trained on CIFAR10.
+
+## Stable-Diffusion with UniPC
+
+We provide an example of applying UniPC to stable-diffusion in `example/stable-diffusion`. Our UniPC can accelerate the sampling in both conditional and unconditional sampling.
+
 
 # Acknowledgement
 
