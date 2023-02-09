@@ -263,7 +263,7 @@ class UniPC:
         self.thresholding_max_val = thresholding_max_val
         
         self.variant = variant
-        self.predict_x0 = algorithm_type == "data_prediction",
+        self.predict_x0 = algorithm_type == "data_prediction"
 
     def dynamic_thresholding_fn(self, x0, t=None):
         """
@@ -294,7 +294,6 @@ class UniPC:
         return x0
 
     def model_fn(self, x, t):
-        self.nfe += 1
         """
         Convert the model to the noise prediction model or the data prediction model. 
         """
@@ -605,7 +604,6 @@ class UniPC:
         intermediates = []
         with torch.no_grad():
             if method == 'multistep':
-                self.nfe = 0
                 assert steps >= order
                 timesteps = self.get_time_steps(skip_type=skip_type, t_T=t_T, t_0=t_0, N=steps, device=device)
                 assert timesteps.shape[0] - 1 == steps
