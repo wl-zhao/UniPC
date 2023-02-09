@@ -4,7 +4,7 @@ UniPC can accelerate both the conditional and unconditional sampling by stable-d
 
 ```bash
 CKPT=models/ldm/ffhq256/model.ckpt
-python3 -m torch.distributed.launch --nproc_per_node=8 --master_port=$PORT scripts/sample_diffusion_ddp.py -r $CKPT \
+python3 -m torch.distributed.launch --nproc_per_node=8 scripts/sample_diffusion_ddp.py -r $CKPT \
 	-n 50000 -l samples/ffhq/uni_pc -c 10 --uni_pc --batch_size 20
 
 ```
@@ -16,7 +16,6 @@ from ldm.models.diffusion.uni_pc import UniPCSampler
 ```
 
 and use the UniPCSampler instead of the default DDIMSampler.
-
 
 ---
 
