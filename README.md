@@ -6,7 +6,7 @@ This code contains the Pytorch implementation for UniPC.
 
 UniPC is a training-free framework designed for the fast sampling of diffusion models, which consists of a corrector (UniC) and a predictor (UniP) that share a unified analytical form and support arbitrary orders.
 
-[[Project Page]](https://unipc.ivg-research.xyz/) [[arXiv]](https://arxiv.org/abs/xxxx.xxxxx)
+[[Project Page]](https://unipc.ivg-research.xyz/) [[arXiv]](https://arxiv.org/abs/2302.04867)
 
 ![intro](assets/intro.png)
 
@@ -38,7 +38,7 @@ If you find our work useful in your research, please consider citing:
 @article{zhao2023unipc,
   title={UniPC: A Unified Predictor-Corrector Framework for Fast Sampling of Diffusion Models},
   author={Zhao, Wenliang and Bai, Lujia and Rao, Yongming and Zhou, Jie and Lu, Jiwen},
-  journal={arXiv preprint arXiv:xxxx:xxxxxx},
+  journal={arXiv preprint arXiv:2302.04867},
   year={2023}
 }
 ```
