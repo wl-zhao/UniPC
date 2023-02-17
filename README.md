@@ -30,6 +30,43 @@ We provide a pytorch example in `example/score_sde_pytorch`, where we show how t
 
 We provide an example of applying UniPC to stable-diffusion in `example/stable-diffusion`. Our UniPC can accelerate the sampling in both conditional and unconditional sampling.
 
+## Integration with 🤗 Diffusers library
+
+UniPC is now also available in 🧨 Diffusers and accesible via the [UniPCMultistepScheduler](https://huggingface.co/docs/diffusers/main/en/api/schedulers/unipc).
+Diffusers allows you to test UniPC in PyTorch in just a couple lines of code.
+
+You can install diffusers as follows:
+
+```
+pip install diffusers accelerate transformers
+```
+
+And then try out the model with just a couple lines of code:
+
+```python
+from diffusers import StableDiffusionPipeline, UniPCMultistepScheduler
+import torch
+
+path = "CompVis/stable-diffusion-v1-4"
+
+pipe = StableDiffusionPipeline.from_pretrained(path, torch_dtype=torch.float16)
+
+# change to UniPC scheduler
+pipe.scheduler = UniPCMultistepScheduler.from_config(pipe.scheduler.config)
+pipe = pipe.to("cuda")
+
+prompt = "prompt = "a highly realistic photo of green turtle"
+generator = torch.manual_seed(0)
+
+# only 15 steps are needed for good results => 2-4 seconds on GPU
+image = pipe(prompt, generator=generator, num_inference_steps=15).images[0]
+
+# save image
+image.save("turtle.png")
+```
+![aa (2)](https://user-images.githubusercontent.com/23423619/219610216-5680ad47-3eeb-4aeb-8591-45363eca4d84.png)
+
+For more information about UniPC and `diffusers`, please have a look [here](https://huggingface.co/docs/diffusers/main/en/api/schedulers/unipc) and [here](https://huggingface.co/docs/diffusers/main/en/using-diffusers/schedulers).
 
 # Acknowledgement
 
