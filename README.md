@@ -55,7 +55,7 @@ pipe = StableDiffusionPipeline.from_pretrained(path, torch_dtype=torch.float16)
 pipe.scheduler = UniPCMultistepScheduler.from_config(pipe.scheduler.config)
 pipe = pipe.to("cuda")
 
-prompt = "prompt = "a highly realistic photo of green turtle"
+prompt = "a highly realistic photo of green turtle"
 generator = torch.manual_seed(0)
 
 # only 15 steps are needed for good results => 2-4 seconds on GPU
