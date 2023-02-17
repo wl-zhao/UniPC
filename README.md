@@ -4,6 +4,11 @@ Created by [Wenliang Zhao](https://wl-zhao.github.io/)\*, [Lujia Bai](https://op
 
 This code contains the Pytorch implementation for UniPC.
 
+---
+An [online demo](https://huggingface.co/spaces/wl-zhao/unipc_sdm) for UniPC with stable-diffusion. Many thanks for the help and hardware resource supporting by HuggingFace 🤗.
+
+---
+
 UniPC is a training-free framework designed for the fast sampling of diffusion models, which consists of a corrector (UniC) and a predictor (UniP) that share a unified analytical form and support arbitrary orders.
 
 [[Project Page]](https://unipc.ivg-research.xyz/) [[arXiv]](https://arxiv.org/abs/2302.04867)
