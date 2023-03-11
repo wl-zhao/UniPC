@@ -14,6 +14,7 @@ UniPC is a training-free framework designed for the fast sampling of diffusion m
 [[Project Page]](https://unipc.ivg-research.xyz/) [[arXiv]](https://arxiv.org/abs/2302.04867)
 
 # News
+- **2023.3.11**: UniPC is used in [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui).
 - **2023.2.20**: UniPC is integrated into 🧨 Diffusers and accesible via the [UniPCMultistepScheduler](https://huggingface.co/docs/diffusers/main/en/api/schedulers/unipc).
 
 ---
