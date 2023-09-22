@@ -2,10 +2,10 @@
 
 Created by [Wenliang Zhao](https://wl-zhao.github.io/)\*, [Lujia Bai](https://lujia-bai.github.io)*, [Yongming Rao](https://raoyongming.github.io/), [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ&hl=en&authuser=1), [Jiwen Lu](https://scholar.google.com/citations?user=TN8uDQoAAAAJ&hl=en&authuser=1)
 
-This code contains the Pytorch implementation for UniPC.
+This code contains the Pytorch implementation for UniPC (NeurIPS 2023).
 
 ---
-An [online demo](https://huggingface.co/spaces/wl-zhao/unipc_sdm) for UniPC with stable-diffusion. Many thanks for the help and hardware resource supporting by HuggingFace 🤗.
+An [online demo](https://huggingface.co/spaces/wl-zhao/unipc_sdm) for UniPC with stable-diffusion. Many thanks for the help and hardware resources supported by HuggingFace 🤗.
 
 ---
 
@@ -86,7 +86,7 @@ If you find our work useful in your research, please consider citing:
 @article{zhao2023unipc,
   title={UniPC: A Unified Predictor-Corrector Framework for Fast Sampling of Diffusion Models},
   author={Zhao, Wenliang and Bai, Lujia and Rao, Yongming and Zhou, Jie and Lu, Jiwen},
-  journal={arXiv preprint arXiv:2302.04867},
+  journal={NeurIPS},
   year={2023}
 }
 ```
